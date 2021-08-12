@@ -1,4 +1,4 @@
-function Product(props) {
+function Profile(props) {
   if (props.title && props.price && props.shops) {
       return (
     <div>
@@ -18,4 +18,4 @@ function Product(props) {
 return <p>There is not enought information</p>
 }
 
-export default Product;
+export default Profile;
