@@ -1,21 +1,20 @@
+
 function Profile(props) {
-  if (props.title && props.price && props.shops) {
-      return (
-    <div>
-      {props.title ? <p>Title: {props.title}</p> : <p>NO TITLE</p>}
-      {props.price > 10 ? <p>Price: ${props.price}</p> : <p>CHEAP</p>}
-          {/* {props.shops && <p>Available in shops : {props.shops[0]}</p>} */}
-            <ul>
-    {props.shops.map(shop => (
-      <li key = {shop.id}>{shop.value}</li>
-    ))}
-  </ul>
-      <p>---------------------</p>
+  return (
+    <div className="profile">
+      <div className="description">
+        <img src={props.avatar} alt="Аватар пользователя" className="avatar" />
+        <p>{props.name}</p>
+        <p>{props.tag}</p>
+        <p>{props.location}</p>
+      </div>
+      <ul className="stats">
+        <li>Followers {props.stats.followers}</li>
+        <li>Views {props.stats.views}</li>
+        <li>Likes {props.stats.likes}</li>
+      </ul>
     </div>
-    
   );
-  }
-return <p>There is not enought information</p>
 }
 
-export default Profile;
+export default Profile; 

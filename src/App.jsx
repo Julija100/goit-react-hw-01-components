@@ -1,15 +1,24 @@
 
 import './App.css';
-import Profile from './Profile';
+import Description from './Profile';
+import user from './user.json'
+import Statistics from './Statistics';
+import statisticalData from './statistical-data.json'
 
 
-const cityes = [{ id: 1, value: 'Minsk' }, { id: 2, value: 'Moscow' }, { id: 3, value: 'Riga' }];
+
 function App() {
   return (
     <div className="App">
-      <Profile title='Phone' price={20} shops={cityes}/>
-      <Profile title= 'Book' price= {10} shops={cityes}/>
-      <Profile />
+      <Description
+        img={user.avatar}
+        name={user.name}
+        tag={user.tag}
+        location={user.location}
+        stats={user.stats}
+      />
+      <Statistics
+        stats={statisticalData} />
     </div>
   );
 }
