@@ -1,11 +1,8 @@
-
-import './App.css';
-import Description from './Profile';
-import user from './user.json'
-import Statistics from './Statistics';
-import statisticalData from './statistical-data.json'
-
-
+import "./App.css";
+import Description from "./Profile";
+import user from "./user.json";
+import Statistics from "./Statistics";
+import statisticalData from "./statistical-data.json";
 
 function App() {
   return (
@@ -17,10 +14,9 @@ function App() {
         location={user.location}
         stats={user.stats}
       />
-      <Statistics
-        stats={statisticalData} />
+      <Statistics stats={statisticalData} title="Upload stats" />
     </div>
   );
 }
 
-export default App; 
+export default App;

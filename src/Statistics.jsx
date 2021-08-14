@@ -1,7 +1,7 @@
-const Statistics = ({ stats }) => {
+const Statistics = ({ stats, title }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
       <ul>
         {stats.map((statisticalData) => (
           <li key={statisticalData.id}>
@@ -12,5 +12,6 @@ const Statistics = ({ stats }) => {
     </section>
   );
 };
+
 
 export default Statistics;
