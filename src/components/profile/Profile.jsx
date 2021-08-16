@@ -5,19 +5,19 @@ function Profile(props) {
     <div className={styles.profile}>
       <div className="profile">
         <div className="description">
-          <img
+          <img 
             src={props.avatar}
             alt="Аватар пользователя"
-            className="avatar"
+            className={styles.avatar}
           />
-          <p>{props.name}</p>
+          <p className={styles.name}>{props.name}</p>
           <p>{props.tag}</p>
           <p>{props.location}</p>
         </div>
         <ul className="stats">
-          <li>Followers {props.stats.followers}</li>
-          <li>Views {props.stats.views}</li>
-          <li>Likes {props.stats.likes}</li>
+          <li className={styles.list}>Followers {props.stats.followers}</li>
+          <li className={styles.list}>Views {props.stats.views}</li>
+          <li className={styles.list}>Likes {props.stats.likes}</li>
         </ul>
       </div>
     </div>
