@@ -1,16 +1,17 @@
-import "./App.css";
-import Description from "./Profile";
+import styles from "./App.module.css";
+import Description from "./components/profile/Profile";
 import user from "./user.json";
-import Statistics from "./Statistics";
+import Statistics from "./components/statistics/Statistics";
 import statisticalData from "./statistical-data.json";
-import FriendList from "./FriendList";
+import FriendList from "./components/friendList/FriendList";
 import friends from './friends.json'
-import TransactionHistory from "./TransactionHistory";
+import TransactionHistory from "./components/transaction/TransactionHistory";
 import transactions from './transactions.json'
 
 function App() {
+ 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Description
         img={user.avatar}
         name={user.name}
