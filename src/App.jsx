@@ -7,15 +7,14 @@ import FriendList from "./components/friendList/FriendList";
 import friends from './friends.json'
 import TransactionHistory from "./components/transaction/TransactionHistory";
 import transactions from './transactions.json'
-import Container from "./components/container/Container";
+
 
 function App() {
  
   return (
     <div className={styles.app}>
-      <Container/>
       <Description
-        img={user.avatar}
+        avatar={user.avatar}
         name={user.name}
         tag={user.tag}
         location={user.location}
